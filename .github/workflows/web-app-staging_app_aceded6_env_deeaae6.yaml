@@ -183,9 +183,11 @@ jobs:
 
               if [ -n ${{ github.event.client_payload.commitId }} ]; then
                 echo "Commit ID provided: ${{ github.event.client_payload.commitId }}"
+                git checkout ${{ github.event.client_payload.commitId }} || true
                 echo "Checked out to commit ID: ${{ github.event.client_payload.commitId }}"
               elif [ -n ${{ github.event.client_payload.branchName }} ]; then
                 echo "Branch name provided: ${{ github.event.client_payload.branchName }}"
+                git checkout ${{ github.event.client_payload.branchName }} || true
                 echo "Checked out to branch: ${{ github.event.client_payload.branchName }}"
               else
                 echo "Neither commit ID nor branch name provided. Skipping checkout."
