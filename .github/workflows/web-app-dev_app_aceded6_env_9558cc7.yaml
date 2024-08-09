@@ -4,9 +4,6 @@ name: web-app-dev_app_aceded6_env_9558cc7 Pipeline (Skyu Generated)
     branches:
       - main
       - master
-    tags:
-      - test
-      - yhy
     paths:
       - package-lock.json
   workflow_dispatch: {}
