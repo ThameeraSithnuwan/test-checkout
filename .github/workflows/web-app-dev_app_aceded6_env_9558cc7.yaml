@@ -3,7 +3,13 @@ name: web-app-dev_app_aceded6_env_9558cc7 Pipeline (Skyu Generated)
   push:
     branches:
       - main
-    paths:
+      - master
+    tags:
+      - test
+    paths-ignore:
+      - .github/workflows/**
+      - .trivyignore
+      - Readme.md
       - README.md
   workflow_dispatch: {}
   repository_dispatch:
